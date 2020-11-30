@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+        }
+
+        .pink-text {
+            color: pink;
+        }
+
+        /*
+        all this style of the parent (body) tag will inherit the ones found inside
+        ******************
+        Prioritize One Style Over Another
+        Sometimes your HTML elements will receive multiple styles that conflict with one another.
+        ------
+        Note: It doesn't matter which order the classes are listed in the HTML element.
+        ----THIS IS IMPORTANT:--------
+        However, the order of the class declarations in the <style> section is what is important. The second 
+        or at the end element(lo va sobreescribiendo los estilos del primero , el segundo sobreescribe al primero, si hay al segundo lo sobreecribe al tercero y haci sucesivamente)
+        declaration will always take precedence over the first.
+        */
+        .yellow-text {
+            color: yellow;
+        }
+
+        .red-text {
+            
+            color: greenyellow !important;
+            /*-------------!IMPORTANT-------------
+        
+        color: red !important;
+        But wait. There's one last way to override CSS. This is the most powerful method of all. But before we do it, let's talk about why you would ever want to override CSS.
+
+        In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you       absolutely need to be sure that an element has specific CSS, you can use !important
+        */
+        }
+
+        /*    ******ID STYLES******
+        Note: It doesn't matter whether you declare this CSS above or below pink-text class, since id attribute will always take precedence.*/
+        #orange-text {
+            color: orange;
+        }
+        /*********OTHER FORM OF  OVERRIDE******
+        There are other ways that you can override CSS IS BELOW:
+          style="color: white;"
+
+
+
+          The list of most important to least important is as follows:
+
+            1.important (!important)
+            2.inline styles
+            3.id declarations
+            4.class declarations
+        */
+        
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1 class="red-text pink-text yellow-text" id="orange-text"style="color: white;">HelloWorld</h1>
+    <!-- in this case override the style of boby by .pink-text -->
+</body>
+
+</html>

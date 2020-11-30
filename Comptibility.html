@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+          --red-color: red;
+        }
+        .red-box {
+     /**/     background:red;/* this is the browser fallback *****/
+          background: var(--red-color);/*si este valor no es compatible con el navegador la vazraibles entonce  el respaldo se encuentra arriba*/
+          height: 200px;
+          width:200px;
+        }
+      </style>
+</head>
+<body>
+    <!--
+    This means that if you do want to provide a browser fallback, it's as easy as providing another more widely supported value immediately before your declaration. That way an older browser will have something to fall back on, while a newer browser will just interpret whatever declaration comes later in the cascade.-->
+   
+      <div class="red-box"></div>
+
+</body>
+</html>

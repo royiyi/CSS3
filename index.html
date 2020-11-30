@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- here we import an external source through a link -->
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <!-- ---------------------- -->
+  <style>
+    .red-text {
+      color: red;
+      font-family: Lobster, monospace;
+      /*If nor find Lobster, monospace entrara en su lugar we cant most ,fo,sndaym,syrec,etc*/
+      /* When one font isn't available, you can tell the browser to "degrade" to another font.
+          Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
+          
+           */
+    }
+
+    p {
+      font-size: 16px;
+      font-family: monospace;
+    }
+
+    .smaller-image {
+      width: 100px;
+      /*change the width one image*/
+    }
+
+    .thick-green-border {
+      border-color: green;
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 10px;
+      /*border-radius: 50%; //this give in circular the image*/
+      /*
+        Remember that you can apply multiple classes to an element using its class attribute, by separating each class name with a space. For   example:
+        <img class="class1 class2">*/
+    }
+
+    .silver-background {
+      background-color: silver;
+    }
+    #cat-photo-form{
+      background-color: green;
+      /*
+      class = .
+      id = # 
+      *for create styles in CSS
+      An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+      */
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <h2 class="red-text">CatPhotoApp</h2>
+  <main>
+    <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+    <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat"
+        alt="A cute orange cat lying on its back."></a>
+
+    <div>
+      <p>Things cats love:</p>
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <p>Top 3 things cats hate:</p>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+    </div>
+
+    <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label><br>
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+
+</html>
